@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module'
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -29,6 +30,7 @@ import { CartPageComponent } from './pages/store/cart-page/cart-page.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
 
