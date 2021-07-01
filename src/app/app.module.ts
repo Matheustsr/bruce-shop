@@ -4,9 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module'
 import { HttpClientModule } from '@angular/common/http'
-
-
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoginPageComponent } from './pages/account/login-page/login-page.component';
@@ -16,6 +13,7 @@ import { PetsPageComponent } from './pages/account/pets-page/pets-page.component
 import { ProductsPageComponent } from './pages/store/products-page/products-page.component';
 import { CartPageComponent } from './pages/store/cart-page/cart-page.component';
 import { ProductCardComponent } from './components/store/product-card/product-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +30,7 @@ import { ProductCardComponent } from './components/store/product-card/product-ca
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
   ],

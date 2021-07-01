@@ -6,9 +6,18 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class DataService {
+
+  public url = 'http://localhost:3001/v1'
   constructor(private http: HttpClient) {}
 
   getProducts() {
-    return this.http.get<Product[]>('http://localhost:3001/v1/products');
+    return this.http.get<Product[]>(`${this.url}/products`);
   }
+  authenticate(data: any) {
+    return this.http.post(`${this.url}/accounts/authenticate`, data);
+  }
+  refreshToken() {
+    return this.http.post(`${this.url}/accounts/refresh-token`, null);
+  }
+
 }
