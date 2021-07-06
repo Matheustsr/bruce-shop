@@ -7,7 +7,7 @@ import { Product } from '../models/product.model';
 })
 export class DataService {
 
-  public url = 'http://localhost:3001/v1'
+  public url = 'http://localhost:3000/v1'
   constructor(private http: HttpClient) {}
 
   public composeHeaders() {

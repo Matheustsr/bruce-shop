@@ -16,14 +16,14 @@ export class Security {
     localStorage.setItem('petshoptoken', token);
   }
 
-  public static getUser(): User {
-    const data = localStorage.getItem('petshopuser');
-    if (data) {
-      return JSON.parse(atob(data));
-    } else {
-      return false;
-    }
-  }
+  // public static getUser(): User {
+  //   const data = localStorage.getItem('petshopuser');
+  //   if (data) {
+  //     return JSON.parse(atob(data));
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   public static getToken(): string {
     const data = localStorage.getItem('petshoptoken');
